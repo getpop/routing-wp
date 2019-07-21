@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GetPoP\\RoutingWP\\": "src"
+            "PoP\\RoutingWP\\": "src"
         },
         "files": [
             "initialize.php"
@@ -36,7 +36,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "GetPoP\\RoutingWP\\": "tests"
+            "PoP\\RoutingWP\\": "tests"
         }
     },
     "scripts": {
