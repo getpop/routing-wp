@@ -19,6 +19,7 @@
     "prefer-stable": true,
     "require": {
         "php" : "~7.1",
+        "brain/cortex": "~1.0.0",
         "getpop/routing": "^1.0@dev",
         "getpop/migrate-routing-wp": "^1.0@dev"
     },
