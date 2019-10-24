@@ -21,7 +21,6 @@ class Component extends AbstractComponent
     {
         parent::init();
         self::initYAMLServices(dirname(__DIR__));
-        Cortex::boot();
     }
 
     /**
@@ -33,8 +32,10 @@ class Component extends AbstractComponent
     {
         parent::boot();
 
+        // Boot Cortex
+        Cortex::boot();
+
         // Initialize classes
         ContainerBuilderUtils::instantiateNamespaceServices(__NAMESPACE__.'\\Hooks');
-        // Cortex::boot();
     }
 }

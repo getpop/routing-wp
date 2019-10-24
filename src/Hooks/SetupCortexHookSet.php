@@ -5,7 +5,7 @@ use PoP\Engine\Hooks\AbstractHookSet;
 use Brain\Cortex\Route\RouteCollectionInterface;
 use Brain\Cortex\Route\QueryRoute;
 use PoP\RoutingWP\WPQueries;
-use PoP\Routing\RouteManagerFacade;
+use PoP\Routing\Facades\RoutingManagerFacade;
 
 class SetupCortexHookSet extends AbstractHookSet
 {
@@ -13,13 +13,13 @@ class SetupCortexHookSet extends AbstractHookSet
     {
         $this->hooksAPI->addAction(
             'cortex.routes',
-            [$this, 'setupCortext'],
+            [$this, 'setupCortex'],
             1
         );
     }
 
     public function setupCortex(RouteCollectionInterface $routes) {
-        $routeManager = RouteManagerFacade::getInstance();
+        $routeManager = RoutingManagerFacade::getInstance();
         foreach ($routeManager->getRoutes() as $route) {
             $routes->addRoute(new QueryRoute(
                 $route,
