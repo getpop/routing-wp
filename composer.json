@@ -17,11 +17,13 @@
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "provide": {
+        "getpop/routing-contracts-implementation": "dev-master"
+    },
     "require": {
         "php" : "~7.1",
         "brain/cortex": "~1.0.0",
-        "getpop/routing": "^1.0@dev",
-        "getpop/migrate-routing-wp": "^1.0@dev"
+        "getpop/routing": "^1.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=7.0",

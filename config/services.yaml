@@ -1,0 +1,8 @@
+services:
+    routing_manager:
+        class: \PoP\RoutingWP\RoutingManager
+        public: true
+
+    PoP\RoutingWP\Hooks\:
+        resource: '../src/Hooks/*'
+        public: true
