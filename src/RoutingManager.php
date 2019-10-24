@@ -8,7 +8,7 @@ class RoutingManager extends AbstractRoutingManager
 {
     use RoutingManagerTrait;
 
-    public function getNature()
+    public function getCurrentNature()
     {
         $this->init();
         if ($this->isStandard()) {
@@ -22,7 +22,7 @@ class RoutingManager extends AbstractRoutingManager
         // Allow plugins to implement their own natures
         return HooksAPIFacade::getInstance()->applyFilters(
             'WPCMSRoutingState:nature',
-            parent::getNature(),
+            parent::getCurrentNature(),
             $this->query
         );
     }
