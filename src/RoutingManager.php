@@ -1,7 +1,7 @@
 <?php
 namespace PoP\RoutingWP;
 use PoP\Hooks\Facades\HooksAPIFacade;
-use PoP\Routing\Natures;
+use PoP\Routing\RouteNatures;
 use PoP\Routing\AbstractRoutingManager;
 
 class RoutingManager extends AbstractRoutingManager
@@ -12,11 +12,11 @@ class RoutingManager extends AbstractRoutingManager
     {
         $this->init();
         if ($this->isStandard()) {
-            return Natures::STANDARD;
+            return RouteNatures::STANDARD;
         } elseif ($this->query->is_home() || $this->query->is_front_page()) {
-            return Natures::HOME;
+            return RouteNatures::HOME;
         } elseif ($this->query->is_404()) {
-            return Natures::NOTFOUND;
+            return RouteNatures::NOTFOUND;
         }
 
         // Allow plugins to implement their own natures
