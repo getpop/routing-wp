@@ -19,8 +19,8 @@ class SetupCortexHookSet extends AbstractHookSet
     }
 
     public function setupCortex(RouteCollectionInterface $routes) {
-        $routeManager = RoutingManagerFacade::getInstance();
-        foreach ($routeManager->getRoutes() as $route) {
+        $routingManager = RoutingManagerFacade::getInstance();
+        foreach ($routingManager->getRoutes() as $route) {
             $routes->addRoute(new QueryRoute(
                 $route,
                 function (array $matches) {
