@@ -28,9 +28,9 @@ class Component extends AbstractComponent
      *
      * @return void
      */
-    public static function prematureBoot()
+    public static function beforeBoot()
     {
-        parent::prematureBoot();
+        parent::beforeBoot();
 
         // Boot Cortex
         Cortex::boot();
