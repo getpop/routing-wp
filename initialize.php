@@ -1,2 +1,2 @@
 <?php
-\PoP\RoutingWP\Component::init();
+//\PoP\RoutingWP\Component::initialize();

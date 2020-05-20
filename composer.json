@@ -22,8 +22,8 @@
     },
     "require": {
         "php" : "~7.1",
-        "brain/cortex": "~1.0.0",
-        "getpop/routing": "dev-master"
+        "getpop/routing": "dev-master",
+        "brain/cortex": "~1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": ">=7.0",
