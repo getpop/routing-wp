@@ -20,12 +20,13 @@ Via Composer
 composer require getpop/routing-wp
 ```
 
-<!--
 ## Usage
 
+Initialize the component:
+
 ``` php
+\PoP\RoutingWP\Component::initialize();
 ```
--->
 
 ## Standards
 
