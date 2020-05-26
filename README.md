@@ -25,7 +25,9 @@ composer require getpop/routing-wp
 Initialize the component:
 
 ``` php
-\PoP\RoutingWP\Component::initialize();
+\PoP\Root\ComponentLoader::initializeComponents([
+    \PoP\RoutingWP\Component::class,
+]);
 ```
 
 ## Standards
