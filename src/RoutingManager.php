@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace PoP\RoutingWP;
+
 use PoP\Hooks\Facades\HooksAPIFacade;
 use PoP\Routing\RouteNatures;
 use PoP\Routing\AbstractRoutingManager;
