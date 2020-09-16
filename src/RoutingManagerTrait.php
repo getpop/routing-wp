@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace PoP\RoutingWP;
 
+use WP_Query;
+
 trait RoutingManagerTrait
 {
-    private $query;
+    private ?WP_Query $query = null;
 
     private function init()
     {
