@@ -6,6 +6,7 @@ namespace PoP\RoutingWP\Hooks;
 
 use PoP\Hooks\AbstractHookSet;
 use Brain\Cortex\Route\RouteCollectionInterface;
+use Brain\Cortex\Route\RouteInterface;
 use Brain\Cortex\Route\QueryRoute;
 use PoP\RoutingWP\WPQueries;
 use PoP\Routing\Facades\RoutingManagerFacade;
@@ -21,6 +22,9 @@ class SetupCortexHookSet extends AbstractHookSet
         );
     }
 
+    /**
+     * @param RouteCollectionInterface<RouteInterface> $routes
+     */
     public function setupCortex(RouteCollectionInterface $routes): void
     {
         $routingManager = RoutingManagerFacade::getInstance();
