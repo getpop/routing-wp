@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PoP\RoutingWP\Hooks;
 
-use PoP\Engine\Hooks\AbstractHookSet;
+use PoP\Hooks\AbstractHookSet;
 use Brain\Cortex\Route\RouteCollectionInterface;
 use Brain\Cortex\Route\QueryRoute;
 use PoP\RoutingWP\WPQueries;
@@ -21,7 +21,7 @@ class SetupCortexHookSet extends AbstractHookSet
         );
     }
 
-    public function setupCortex(RouteCollectionInterface $routes)
+    public function setupCortex(RouteCollectionInterface $routes): void
     {
         $routingManager = RoutingManagerFacade::getInstance();
         foreach ($routingManager->getRoutes() as $route) {
