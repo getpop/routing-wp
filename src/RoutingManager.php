@@ -12,7 +12,7 @@ class RoutingManager extends AbstractRoutingManager
 {
     use RoutingManagerTrait;
 
-    public function getCurrentNature()
+    public function getCurrentNature(): string
     {
         $this->init();
         if ($this->isStandard()) {
