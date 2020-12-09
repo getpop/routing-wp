@@ -21,7 +21,7 @@
         "getpop/routing-contracts-implementation": "~0.1"
     },
     "require": {
-        "php": "~7.4",
+        "php": "^7.4|^8.0",
         "getpop/routing": "dev-master",
         "brain/cortex": "~1.0.0"
     },

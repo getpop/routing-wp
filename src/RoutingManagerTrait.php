@@ -22,6 +22,11 @@ trait RoutingManagerTrait
     {
         /** @var WP_Query */
         $query = $this->query;
+        var_dump($query->query_vars, WPQueries::STANDARD_NATURE);
+        var_dump(array_intersect(
+            $query->query_vars,
+        ));
+        die;
         // If we passed query args STANDARD_NATURE, then it's a route
         return !empty(
             array_intersect(
